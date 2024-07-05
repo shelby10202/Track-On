@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a escala da viewport -->
+    <title>Track On</title> <!-- Título da página -->
+    <link rel="preconnect" href="https://rsms.me/"> <!-- Preconecta ao domínio para melhorar o desempenho -->
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css"> <!-- Link para a fonte Inter -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo de estilo CSS -->
+</head>
+
+<body>
+    <h1>Minha Página de Downloads</h1> <!-- Cabeçalho principal -->
+    <p>Links para aplicativos essenciais no Windows:</p> <!-- Parágrafo introdutório -->
+    <div class="download-links">
+        <div>
+            <h2>Produtividade</h2>
+            <ul>
+                <li><a href="https://www.microsoft.com/pt-br/microsoft-365">Microsoft Office 365</a></li>
+                <li><a href="https://www.opera.com/pt-br/gx">Opera GX</a></li>
+                <li><a href="https://slack.com/">Slack</a></li>
+                <li><a href="https://zoom.us/">Zoom</a></li>
+                <li><a href="https://www.notion.so/">Notion</a></li>
+                <li><a href="https://evernote.com/">Evernote</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Desenvolvimento e Tecnologia</h2>
+            <ul>
+                <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+                <li><a href="https://git-scm.com/">Git</a></li>
+                <li><a href="https://www.docker.com/">Docker</a></li>
+                <li><a href="https://www.postman.com/">Postman</a></li>
+                <li><a href="https://www.wireshark.org/">Wireshark</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Entretenimento</h2>
+            <ul>
+                <li><a href="https://www.spotify.com/">Spotify</a></li>
+                <li><a href="https://www.videolan.org/vlc/">VLC Media Player</a></li>
+                <li><a href="https://store.steampowered.com/">Steam</a></li>
+                <li><a href="https://www.netflix.com/">Netflix</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Cibersegurança</h2>
+            <ul>
+                <li><a href="https://www.kali.org/">Kali Linux</a></li>
+                <li><a href="https://www.metasploit.com/">Metasploit</a></li>
+                <li><a href="https://portswigger.net/burp">Burp Suite</a></li>
+                <li><a href="https://nmap.org/">Nmap</a></li>
+                <li><a href="https://www.openwall.com/john/">John the Ripper</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Máquinas Virtuais (VMs)</h2>
+            <ul>
+                <li><a href="https://www.vmware.com/products/workstation-player.html">VMware Workstation Player</a></li>
+                <li><a href="https://www.virtualbox.org/">VirtualBox</a></li>
+                <li><a href="https://www.vagrantup.com/">Vagrant</a></li>
+                <li><a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/">Hyper-V</a></li>
+                <li><a href="https://www.qemu.org/">QEMU</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Sistemas Operacionais de Cibersegurança</h2>
+            <ul>
+                <li><a href="https://www.kali.org/get-kali/">Kali Linux</a></li>
+                <li><a href="https://www.parrotsec.org/download/">Parrot OS</a></li>
+                <li><a href="https://www.archlinux.org/download/">Arch Linux</a></li>
+                <li><a href="https://blackarch.org/downloads.html">Black Arch Linux</a></li>
+            </ul>
+        </div>
+    </div>
+    <h1>Navegador Anônimo</h1>
+    <form id="searchForm">
+        <input type="text" id="searchQuery" placeholder="Digite sua pesquisa..." required>
+        <input type="submit" value="Pesquisar">
+    </form>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var query = document.getElementById('searchQuery').value;
+            var url = 'https://duckduckgo.com/?q=' + encodeURIComponent(query) + '&t=h_&ia=web';
+            var width = 600;
+            var height = 400;
+            var left = (screen.width - width) / 2;
+            var top = (screen.height - height) / 2;
+            window.open(url, 'popup', 'width=' + width + ',height=' + height + ',top=' + top + ',left=' + left);
+        });
+    </script>
+
+</html>

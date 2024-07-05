@@ -1,0 +1,76 @@
+:root {
+    font-family: Inter, sans-serif; /* Define a fonte padrão */
+    font-feature-settings: 'liga' 1, 'calt' 1; /* Habilita ligações e alternâncias contextuais */
+}
+@supports (font-variation-settings: normal) {
+    :root { font-family: InterVariable, sans-serif; /* Usa a versão variável da fonte se suportada */ }
+}
+body {
+    background-color: #121212; /* Cor de fundo da página */
+    color: #ffffff; /* Cor do texto */
+    margin: 0; /* Remove a margem padrão do body */
+    padding: 20px; /* Espaçamento interno ao redor do conteúdo */
+    display: flex; /* Define o layout flexível */
+    flex-direction: column; /* Coloca os filhos em uma coluna */
+    align-items: center; /* Centraliza os filhos horizontalmente */
+    justify-content: flex-start; /* Alinha os filhos no topo */
+    min-height: 100vh; /* Define a altura mínima como 100% da altura da viewport */
+    text-decoration: none;
+}
+h1, p {
+    margin: 0.5em; /* Margem ao redor do título e parágrafo */
+    text-align: center; /* Centraliza o texto */
+}
+.download-section {
+    display: flex; /* Define o layout flexível */
+    flex-direction: column; /* Coloca os filhos em uma coluna */
+    align-items: center; /* Centraliza os filhos horizontalmente */
+    width: 100%; /* Largura completa */
+    max-width: 1200px; /* Largura máxima para evitar esticamento excessivo */
+    gap: 20px; /* Espaçamento entre as colunas */
+}
+.download-row {
+    display: flex; /* Define o layout flexível */
+    justify-content: center; /* Centraliza os filhos horizontalmente */
+    width: 100%; /* Largura completa */
+    gap: 20px; /* Espaçamento entre os itens na linha */
+}
+.download-links {
+    flex: 1 1 calc(33.33% - 20px); /* Flex-grow, flex-shrink, flex-basis para distribuir igualmente */
+    min-width: 250px; /* Largura mínima de cada coluna */
+    margin: 100px; /* Margens ao redor de cada coluna */
+}
+.download-links ul {
+    padding: 0; /* Remove o padding padrão */
+    margin: 10px 0; /* Margem acima e abaixo da lista */
+    list-style: none; /* Remove os marcadores da lista */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+.download-links a {
+    color: #999999; /* Cor do texto do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+.download-links a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    border: 1px solid #333333; /* Mudança na cor da borda */
+    background-color: #1e1e1e; /* Cor de fundo escura */
+    color: #ffffff; /* Cor do texto */
+    border-radius: 5px;
+}
+input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff9800; /* Cor do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #e68900; /* Cor do botão ao passar o mouse */
+}
